@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: /js/
+Disallow: /lib/
+Disallow: /mvcApp_inra_mapping_bo/js
+Disallow: /mvcApp_inra_mapping_bo/css
+Disallow: /mvcApp_inra_mapping_bo/mvc_view
+Disallow: /mvcApp_inra_mapping_bo/mvc_model
+Disallow: /mvcApp_inra_mapping_fo/js
+Disallow: /mvcApp_inra_mapping_fo/css
+Disallow: /mvcApp_inra_mapping_fo/mvc_view
+Disallow: /mvcApp_inra_mapping_fo/mvc_model
+
+Sitemap: http://inra_mapping.bourelly.net/back_office/sitemap.xml

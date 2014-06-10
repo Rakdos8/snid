@@ -1,0 +1,17 @@
+I) Préparez correctement le terrain:
+	- Il est nécessaire d'avoir accès au DNS du nom de domaine en question.
+	- Il est nécessaire d'avoir accès à la Base de Données sous MySQL (phpmyadmin peut être utile).
+	
+II) Préparez la Base de Données en créant un nouvel utilisateur et son mot de passe.
+III) Avec le fichier SQL joint, créez la nouvelle base au nom souhaité.
+
+IV) Donnez les informations de connexion à la BDD dans le fichier config.php qui se trouve à la racine du projet.
+
+V) Placez l'intégralité du projet dans le dossier de votre choix.
+
+VI) L'accès au front office se fait directement avec le lien configuré par le DNS. Par exemple http://demo.snid.fr
+VI-2) L'accès au back office se fait seulement par l'url, on doit spécifier le backoffice. Par exemple: http://backoffice.demo.snid.fr. !! Attention à la configuration du DNS !!
+VI-3) Ce paramètre est configurable à la ligne 28 de index.php à la racine du projet ==> if (stristr($_SERVER['HTTP_HOST'], "backoffice") !== false)
+
+VII) Prenez le temps de paramétrer le fichier .htaccess dans la racine du projet afin de rediriger les erreurs PHP dans le fichier voulu ligne 5: php_value error_log /var/www/log_error_php.txt
+VII-2) Le chemin vers le fichier DOIT être absolu. Le fichier DOIT être sous ce nom: "log_error_php.txt".
