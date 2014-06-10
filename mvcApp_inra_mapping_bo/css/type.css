@@ -1,0 +1,65 @@
+/*
+	This file is part of Système de Navigation Interactif et Dynamique (SNID).
+
+    SNID is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SNID is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SNID. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********************************** SQUELETTE DU SITE INTERNET ***********************************/
+body {
+	font-family: Verdana, Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F0F0F0;
+	font-size: 13px;
+}
+a {
+	color: #0BA00B;
+	cursor: pointer;
+	font-style: normal;
+	text-decoration: none;
+}
+a:hover {
+	color: #0BA00B;
+	cursor: pointer;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+}
+a img {
+	border: none;
+}
+a img:hover {
+	border: none;
+}
+a:hover img:hover {
+	border: none;
+}
+abbr {
+	border-bottom: 1px dotted #0BA00B;
+}
+table {
+	width: 95%;
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
+th, tr, td {
+	text-align: left;
+	vertical-align: middle;
+}
+span.colonne_organisable {
+	cursor: pointer;
+
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #0BA00B;
+}

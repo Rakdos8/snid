@@ -1,0 +1,349 @@
+/*
+	This file is part of Système de Navigation Interactif et Dynamique (SNID).
+
+    SNID is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    SNID is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with SNID. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********************************** PETITES PARTIES DU DESIGN ***********************************/
+p.erreur {
+	color: #AA0000;
+	text-align: center;
+}
+p.menu_navigation {
+	text-align: left;
+}
+
+p.introduction_partie {
+	text-align: left;
+}
+p.introduction_partie:first-letter {
+	margin-left: 25px;
+}
+
+p.sous_introduction_partie {
+	text-align: left;
+	margin-top: -10px;
+}
+
+h3.titre_partie {
+	color: #0BA00B;
+	text-align: center;
+}
+
+table.formulaires {
+	width: 100%;
+}
+
+iframe.previsualisation_graphe {
+	width: 100%;
+	height: 99%;
+}
+
+.menu_bas_redimensionner {
+	position: fixed;
+	display: inline-block;
+
+	top: 95%;
+	left: 94%;
+	z-index: 10;
+
+	float: right;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+.menu_haut_redimensionner {
+	position: fixed;
+	display: inline-block;
+
+	top: 3%;
+	left: 94%;
+	z-index: 10;
+
+	float: right;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+
+td input.input_texte {
+	width: 90%;
+	text-align: center;
+}
+td select.select_texte {
+	width: 90%;
+	text-align: center;
+}
+
+/*
+** CSS basique sur les colonnes
+*/
+td.colonne_centre {
+	width: auto;
+	text-align: center;
+}
+td.colonne_droite {
+	width: 50%;
+	text-align: left;
+}
+td.colonne_gauche {
+	width: 50%;
+	text-align: right;
+}
+
+/*
+** CSS pour la gestion des utilisateurs
+*/
+td.colonne_identifiant {
+	width: 25%;
+	text-align: center;
+}
+td.colonne_mot_de_passe {
+	width: 25%;
+	text-align: center;
+}
+td.colonne_droits {
+	width: 30%;
+	text-align: center;
+}
+td.colonne_mettre_a_jour {
+	width: 10%;
+	text-align: center;
+}
+td.colonne_supprimer {
+	width: 10%;
+	text-align: center;
+}
+
+/*
+** CSS pour la gestion des configurations
+*/
+td.colonne_config_activee {
+	width: 15%;
+	text-align: center;
+}
+td.colonne_config_liens_visibles {
+	width: 15%;
+	text-align: center;
+}
+td.colonne_config_mode_navigation {
+	width: 15%;
+	text-align: center;
+}
+td.colonne_config_couleur_interne {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_config_couleur_externe {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_config_mettre_a_jour {
+	width: 10%;
+	text-align: center;
+}
+td.colonne_config_supprimer {
+	width: 5%;
+	text-align: center;
+}
+
+/*
+** CSS pour l'ajout d'une catégorie
+*/
+td.colonne_nom_categorie_ajout {
+	width: 40%;
+	text-align: center;
+}
+td.colonne_nom_partiel_categorie_ajout {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_couleur_categorie_ajout {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_couleur_select_categorie_ajout {
+	width: 20%;
+	text-align: center;
+}
+
+/*
+** CSS pour la gestion d'une catégorie
+*/
+td.colonne_nom_categorie {
+	width: 30%;
+	text-align: center;
+}
+td.colonne_nom_partiel_categorie {
+	width: 11%;
+	text-align: center;
+}
+td.colonne_couleur_categorie {
+	width: 17%;
+	text-align: center;
+}
+td.colonne_couleur_select_categorie {
+	width: 17%;
+	text-align: center;
+}
+td.colonne_mettre_a_jour_categorie {
+	width: 8%;
+	text-align: center;
+}
+td.colonne_details_noeud {
+	width: 6%;
+	text-align: center;
+}
+td.colonne_details_lien {
+	width: 6%;
+	text-align: center;
+}
+td.colonne_supprimer_categorie {
+	width: 5%;
+	text-align: center;
+}
+
+/*
+** CSS pour l'ajout d'un noeud
+*/
+td.colonne_nom_noeud_ajout {
+	width: 30%;
+	text-align: center;
+}
+td.colonne_nom_partiel_noeud_ajout {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_nom_categorie_ajout {
+	width: 25%;
+	text-align: center;
+}
+td.colonne_url_noeud_ajout {
+	width: 25%;
+	text-align: center;
+}
+
+/*
+** CSS pour la gestion d'un noeud
+*/
+td.colonne_nom_noeud {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_nom_partiel_noeud {
+	width: 10%;
+	text-align: center;
+}
+td.colonne_nom_categorie {
+	width: 18%;
+	text-align: center;
+}
+td.colonne_url_noeud {
+	width: 20%;
+	text-align: center;
+}
+td.colonne_mettre_a_jour_noeud {
+	width: 10%;
+	text-align: center;
+}
+td.colonne_details_lien_noeud {
+	width: 6%;
+	text-align: center;
+}
+td.colonne_details_template_noeud {
+	width: 6%;
+	text-align: center;
+}
+td.colonne_supprimer_noeud {
+	width: 10%;
+	text-align: center;
+}
+
+/*
+** CSS pour l'ajout d'un lien
+*/
+td.colonne_noeud_gauche {
+	width: 50%;
+	text-align: center;
+}
+td.colonne_noeud_droit {
+	width: 50%;
+	text-align: center;
+}
+
+/*
+** CSS pour la gestion d'un lien
+*/
+td.colonne_nom_noeud_gauche {
+	width: 40%;
+	text-align: center;
+}
+td.colonne_nom_noeud_droit {
+	width: 40%;
+	text-align: center;
+}
+td.colonne_mettre_a_jour_lien {
+	width: 10%;
+	text-align: center;
+}
+td.colonne_supprimer_lien {
+	width: 10%;
+	text-align: center;
+}
+
+/*
+** CSS pour l'ajout et modification d'un template
+*/
+td.colonne_gauche_template {
+	width: 8%;
+	text-align: right;
+}
+td.colonne_droite_template {
+	width: 92%;
+	text-align: left;
+}
+
+/*
+** CSS pour la gestion d'un template
+*/
+td.colonne_nom_noeud_template {
+	width: 40%;
+	text-align: center;
+}
+td.colonne_nom_categorie_template {
+	width: 40%;
+	text-align: center;
+}
+td.colonne_edition_template {
+	width: 10%;
+	text-align: center;
+}
+td.colonne_supprimer_template {
+	width: 10%;
+	text-align: center;
+}
+
+/*
+** CSS pour la gestion des erreurs PHP
+*/
+div.containeur_erreur {
+	width: 100%;
+	height: 50%;
+
+	text-align: center;
+}
+textarea.fichier_erreur {
+	width: 100%;
+	height: 100%;
+}
